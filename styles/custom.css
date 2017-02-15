@@ -1,17 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+
 /*********************
     STYLES
 *********************/
 
 /*Colors*/
 
-.bg-white {
-  background-color: #fff;
+.bg-white { background-color: #fff;}
+
+.tx-white { color: #fff;}
+
+.bg-orange { background-color: #F05F40;}
+
+.tx-orange { color: #f05f40;}
+
+.bg-black { background-color: #222;}
+
+.tx-black {color: #222;}
+
+.bg-transparent { background-color: transparent}
+
+
+/*********************
+    UTILITIES
+*********************/
+
+/*********************
+    NAV
+*********************/
+
+.navbar {
+  border-bottom: 1px solid lightgray;
+  font-size: 
 }
 
-.bg-orange {
-  background-color: #F05F40
+.navbar-toggler {
+  cursor: pointer;
 }
 
-.bg-black {
-  background-color: #222;
+.navbar-toggler .navbar-toggler-icon {
+  background-image: none;
+  width: auto;
+}
+
+.navbar-toggler-icon {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.navbar .navbar-brand-wrap {
+  width: auto;
 }
