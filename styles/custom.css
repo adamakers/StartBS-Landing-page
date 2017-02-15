@@ -80,13 +80,27 @@ body {
   top: 0;
   left: 0;
   padding: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  /*padding-top: 10px;
+  padding-bottom: 10px;*/
+  transition: border 0.3s ease;
 }
 
 .navbar .container-fluid {
   margin-left: 0;
   margin-right: 0;
+}
+
+.navbar .navbar-brand-wrap {
+  width: auto;
+}
+
+.navbar .navbar-brand {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navbar-toggler {
+  margin-top: 5px;
 }
 
 .navbar-toggler .navbar-toggler-icon {
@@ -99,14 +113,10 @@ body {
   line-height: 18px;
 }
 
-.navbar .navbar-brand-wrap {
-  width: auto;
-}
-
 .navbar .navbar-menu {
   border-top: 1px solid lightgray;
   position: relative;
-  transform:translateY(11px)
+  transform:translateY(11px);
 }
 
 .navbar .navbar-nav .nav-item .nav-link {
@@ -131,7 +141,8 @@ body {
 }
 
 .main-header .contain-inner {
-  padding-top: 55px;
+  padding-top: 58px;
+  padding-bottom: 58px;
 }
 
 .home-heading {
@@ -159,6 +170,17 @@ body {
   *********************/
   .navbar {
     background-color: transparent;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .navbar-scrolled {
+    background-color: white;
+    border: none;
+  }
+
+  .navbar.navbar-scrolled .navbar-brand,
+  .navbar.navbar-scrolled .navbar-menu .navbar-nav .navbar-link {
+    color: #222;
   }
 
   .navbar .navbar-menu {
