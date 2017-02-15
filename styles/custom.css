@@ -9,6 +9,10 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+::selection {
+  background-color: #222;
+}
+
 
 
 /*********************
@@ -23,7 +27,7 @@ body {
 
 .bg-orange { background-color: #F05F40;}
 
-.tx-orange { color: #f05f40;}
+.tx-orange { color: #f05f40 !important;}
 
 .bg-black { background-color: #222;}
 
@@ -43,6 +47,10 @@ body {
     UTILITIES
 *********************/
 
+.contain-inner {
+  max-width: 1000px;
+}
+
 .divider {
   display: block;
   width: 70px;
@@ -58,18 +66,27 @@ body {
   font-weight: bold;
 }
 
+.point {
+  cursor: pointer;
+}
+
 
 /*********************
     NAV
 *********************/
 
 .navbar {
-  border-bottom: 1px solid lightgray;
-  font-size: 
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.navbar-toggler {
-  cursor: pointer;
+.navbar .container-fluid {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .navbar-toggler .navbar-toggler-icon {
@@ -86,8 +103,21 @@ body {
   width: auto;
 }
 
-.navbar-nav .nav-item .nav-link {
+.navbar .navbar-menu {
+  border-top: 1px solid lightgray;
+  position: relative;
+  transform:translateY(11px)
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
   font-size: 14px;
+  color: #222;
+  transition: all 0.3s ease;
+}
+
+.navbar .navbar-wrap .navbar-brand,
+.navbar .navbar-nav .nav-item .nav-link:hover {
+  color: #F05F40;
 }
 
 
@@ -100,10 +130,50 @@ body {
   background-size: cover;
 }
 
+.main-header .contain-inner {
+  padding-top: 55px;
+}
+
 .home-heading {
   font-size: 30px;
 }
 
 .find-out-btn {
   
+}
+
+
+.test {
+  height: 2000px;
+  background-color: green;
+}
+
+/*********************
+    MEDIA QUERIES
+*********************/
+
+@media(min-width: 768px) {
+  
+  /*********************
+      NAV
+  *********************/
+  .navbar {
+    background-color: transparent;
+  }
+
+  .navbar .navbar-menu {
+    border:none;
+    transform:translateY(0px)
+  }
+
+  .navbar .navbar-wrap .navbar-brand,
+  .navbar .navbar-nav .nav-item .nav-link {
+    color: white;
+    
+  }
+
+  .navbar .navbar-wrap .navbar-brand:hover,
+  .navbar .navbar-nav .nav-item .nav-link:hover {
+    color: #F05F40;
+  }
 }
