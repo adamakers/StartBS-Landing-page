@@ -116,7 +116,6 @@ body {
 .navbar .navbar-menu {
   border-top: 1px solid lightgray;
   position: relative;
-  transform:translateY(11px);
 }
 
 .navbar .navbar-nav .nav-item .nav-link {
