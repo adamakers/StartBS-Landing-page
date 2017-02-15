@@ -31,6 +31,13 @@ body {
 
 .bg-transparent { background-color: transparent}
 
+/*FONTS*/
+
+.description {
+  font-family: 'Merriweather', serif;
+  font-weight: lighter;
+}
+
 
 /*********************
     UTILITIES
@@ -38,10 +45,17 @@ body {
 
 .divider {
   display: block;
-  width: 60px;
+  width: 70px;
   height: 3px;
-  background-color: red;
   margin: 0 auto;
+}
+
+.cust-btn {
+  border: none;
+  border-radius: 50000px;
+  padding: 20px 30px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 
@@ -88,4 +102,8 @@ body {
 
 .home-heading {
   font-size: 30px;
+}
+
+.find-out-btn {
+  
 }
