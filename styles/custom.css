@@ -14,16 +14,26 @@ body {
 
 body {
   font-family: 'Open Sans', sans-serif;
+  color: #222;
 }
 
 li {
   font-weight: bold;
-}
-
-a {
   text-transform: uppercase;
 }
 
+a {
+  color: #222;
+}
+
+a:hover {
+  color: #f05f40;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
 
 h3 {
   margin: 15px 0 10px;
@@ -31,6 +41,8 @@ h3 {
 
 p {
   font-family: 'Merriweather', serif;
+  margin-bottom: 25px;
+  font-weight: lighter;
 }
 
 hr {
@@ -49,8 +61,19 @@ section {
 }
 
 aside {
-  padding: 30px;
+  padding: 40px;
+  background-color: #222;
 }
+
+::selection {
+  background: #222;
+  color: #fff;
+}
+
+
+/*****************
+    REUSABLE CLASSES
+*****************/
 
 .btn {
   border-radius: 50000px;
@@ -58,6 +81,17 @@ aside {
   text-transform: uppercase;
   padding: 20px 30px;
   font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+
+.btn-white {
+  background-color: #fff;
 }
 
 i.fa {
@@ -70,23 +104,100 @@ i.fa {
   font-size: 40px;
 }
 
-
-/*****************
-    REUSABLE CLASSES
-*****************/
-
-.bg-primary {
+.background-primary {
   background-color: #f05f40;
 }
 
-.bg-secondary {
-  background-color: #fff;
+.background-dark {
+  background-color: #222;
 }
 
 .txt-primary {
-  color: #f05f40;
+  color: #fff;
 }
 
-.txt-secondary {
-  color: #fff;
+
+/*****************
+    NAV
+*****************/
+
+
+
+/*****************
+    HEADER
+*****************/
+
+.main-header {
+  width: 100%;
+  background-image: url("./../assets/img/header.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0;
+  padding: 120px 0;
+}
+
+.jumbotron {
+  border-radius: 0px;
+}
+
+.main-header .container {
+  max-width: 1000px;
+}
+
+.main-header p {
+  margin-bottom: 60px;
+}
+
+/*****************
+    SERVICE
+*****************/
+
+
+
+
+/*****************
+    DOWNLOAD
+*****************/
+
+.download h2 {
+  margin-bottom: 25px
+}
+
+
+/*****************
+    MEDIA QUERIES
+*****************/
+
+@media(min-width: 768px) {
+
+  hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  /*****************
+     HEADER
+  *****************/
+  .main-header {
+    height: 100vh;
+    position: relative;
+  }
+
+  .main-header .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .main-header h1 {
+    font-size: 48px;
+  }
+
+  .main-header p {
+    font-size: 18px;
+  }
+
 }
