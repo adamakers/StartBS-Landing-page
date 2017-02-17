@@ -243,7 +243,7 @@ i.fa {
 
 .tile:hover a .img-cap,
 .tile:active a .img-cap {
-  background-color: rgba(240, 95, 64, 0.65);
+  background-color: rgba(240, 95, 64, 0.7);
   opacity: 1;
 }
 
