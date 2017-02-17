@@ -26,14 +26,6 @@ $(document).ready(function(){
     });
   }
 
-  //smooth scroll handler
-  function smoothScroll(event) {
-    event.preventDefault();
-
-    $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 500);
-  }
 
   //navigation color change
   function changeHeader(event) {
@@ -47,15 +39,27 @@ $(document).ready(function(){
     }
   }
 
+  //smooth scroll
+  $('a[href*="#"]:not([href="#"])').click(function() {
+  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    if (target.length) {
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 1000);
+      return false;
+    }
+  }
+});
+
 
 // ***** EVENT LISTENERS *****
 
   $window.on('scroll resize', function(){
     check_if_in_view();
     changeHeader();
-  });
-
-  $doc.on('click', 'a', smoothScroll);
+  });;
 
   //triggers a scroll event so if items are already in view
   //on load the element will animate`
