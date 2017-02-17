@@ -119,6 +119,8 @@ i.fa {
   color: #fff;
 }
 
+
+/* transitions*/
 .ease {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;

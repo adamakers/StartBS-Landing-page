@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+  const $doc = $(document);
   const $animation_elements = $('.animation-element');
   const $window = $(window);
 
@@ -25,9 +26,36 @@ $(document).ready(function(){
     });
   }
 
+  //smooth scroll handler
+  function smoothScroll(event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+  }
+
+  //navigation color change
+  function changeHeader(event) {
+    const $nav = $('.navbar');
+    let scrollPosition = $(this).scrollTop();
+    
+    if (scrollPosition >= 55) {
+      $nav.addClass('lit');
+    } else {
+      $nav.removeClass('lit');
+    }
+  }
+
+
 // ***** EVENT LISTENERS *****
 
-  $window.on('scroll resize', check_if_in_view);
+  $window.on('scroll resize', function(){
+    check_if_in_view();
+    changeHeader();
+  });
+
+  $doc.on('click', 'a', smoothScroll);
 
   //triggers a scroll event so if items are already in view
   //on load the element will animate`
