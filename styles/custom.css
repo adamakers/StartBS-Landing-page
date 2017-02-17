@@ -22,11 +22,13 @@ li {
   text-transform: uppercase;
 }
 
-a {
+a:link,
+a:visited {
   color: #222;
 }
 
-a:hover {
+a:hover,
+a:active {
   color: #f05f40;
 }
 
@@ -65,6 +67,11 @@ aside {
   background-color: #222;
 }
 
+::-moz-selection {
+  background: #222;
+  color: #fff;
+}
+
 ::selection {
   background: #222;
   color: #fff;
@@ -82,7 +89,6 @@ aside {
   padding: 20px 30px;
   font-size: 14px;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 .btn:hover {
@@ -108,12 +114,13 @@ i.fa {
   background-color: #f05f40;
 }
 
-.background-dark {
-  background-color: #222;
-}
-
 .txt-primary {
   color: #fff;
+}
+
+.ease {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 
@@ -144,12 +151,17 @@ i.fa {
   padding-right: 15px;
 }
 
-.navbar .navbar-brand {
-  color: #f05f40;
+.navbar .nav-item .nav-link:link,
+.navbar .nav-item .nav-link:visited {
+  font-size: 14px;
+  color: #222;
 }
 
-.navbar .nav-link {
-  font-size: 14px;
+.navbar .navbar-brand:link,
+.navbar .navbar-brand:visited,
+.navbar .nav-item .nav-link:hover,
+.navbar .nav-item .nav-link:active {
+  color: #f05f40;
 }
 
 
@@ -218,28 +230,38 @@ i.fa {
     border-bottom: 1px solid #e7e7e7;
   }
 
-  .navbar .navbar-brand,
-  .navbar .navbar-nav .nav-item .nav-link {
-    color: #fff;
-    transition: color 0.3s ease;
-  }
-
-  .navbar.lit {
-    background-color: #fff;
-  }
-
-  .navbar.lit .navbar-nav .nav-item .nav-link {
-    color: #222;
-  }
-
   .navbar .navbar-nav {
     border-top: none;
     padding-top: 0;
     margin-top: 0;
   }
 
+  .navbar .navbar-brand:link,
+  .navbar .navbar-brand:visited,
+  .navbar .navbar-nav .nav-item .nav-link:link,
+  .navbar .navbar-nav .nav-item .nav-link:visited {
+    color: #fff;
+  }
+
+  /*
+  after user scrolls, nav will turn white
+  link colors will also change
+  */
+  .navbar.lit {
+    background-color: #fff;
+  }
+
+  .navbar.lit .navbar-nav .nav-item .nav-link:link,
+  .navbar.lit .navbar-nav .nav-item .nav-link:visited {
+    color: #222;
+  }
+
   .navbar .navbar-brand:hover,
-  .navbar .navbar-nav li.nav-item .nav-link:hover {
+  .navbar .nabvar-brand:active,
+  .navbar.lit .navbar-brand:link,
+  .navbar.lit .navbar-brand:visited,
+  .navbar.lit .navbar-nav .nav-item .nav-link:hover,
+  .navbar.lit .navbar-nav .nav-item .nav-link:active {
     color: #f05f40;
   }
 
@@ -255,7 +277,8 @@ i.fa {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     margin-left: auto;
     margin-right: auto;
   }
