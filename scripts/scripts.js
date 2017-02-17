@@ -25,9 +25,7 @@ $(document).ready(function(){
     });
   }
 
-  function testFunc() {
-    console.log('asdf')
-  }
+// ***** EVENT LISTENERS *****
 
   $window.on('scroll resize', check_if_in_view);
 
