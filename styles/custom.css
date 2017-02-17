@@ -83,6 +83,7 @@ aside {
     REUSABLE CLASSES
 *****************/
 
+/*Buttons*/
 .btn {
   border-radius: 50000px;
   font-weight: bold;
@@ -101,6 +102,8 @@ aside {
   background-color: #fff;
 }
 
+
+/*Icons*/
 i.fa {
   color: #f05f40;
   font-size: 60px;
@@ -111,6 +114,7 @@ i.fa {
   font-size: 40px;
 }
 
+/*Colors*/
 .background-primary {
   background-color: #f05f40;
 }
@@ -119,15 +123,8 @@ i.fa {
   color: #fff;
 }
 
-.items-centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
-
-/* transitions*/
+/* transitions & animations*/
 .ease {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -136,19 +133,35 @@ i.fa {
 .animation-element {
   position: relative;
   opacity: 0;
-  transform: translateY(20px);
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: opacity 1s ease,
+              -webkit-transform 1s ease;
+  transition: opacity 1s ease,
+              -webkit-transform 1s ease;
   transition: opacity 1s ease,
               transform 1s ease;
+  transition: opacity 1s ease,
+              transform 1s ease,
+              -webkit-transform 1s ease;
 }
 
 .fa-envelope-o.animation-element {
+  -webkit-transition: opacity 1s 0.25s ease,
+              -webkit-transform 1s 0.25s ease;
+  transition: opacity 1s 0.25s ease,
+              -webkit-transform 1s 0.25s ease;
   transition: opacity 1s 0.25s ease,
               transform 1s 0.25s ease;
+  transition: opacity 1s 0.25s ease,
+              transform 1s 0.25s ease,
+              -webkit-transform 1s 0.25s ease;
 }
 
 .in-view {
   opacity: 1;
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 
@@ -239,6 +252,12 @@ i.fa {
   opacity: 0;
   height: 100%;
   width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translate3d(0,0,0);
 }
 
 .tile:hover a .img-cap,
@@ -247,7 +266,13 @@ i.fa {
   opacity: 1;
 }
 
-
+.cap-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
 
 
 /*****************
@@ -331,8 +356,8 @@ i.fa {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 
   .main-header h1 {
