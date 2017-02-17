@@ -30,6 +30,7 @@ a:visited {
 a:hover,
 a:active {
   color: #f05f40;
+  text-decoration: none;
 }
 
 h1 {
@@ -121,6 +122,19 @@ i.fa {
 .ease {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+/*.animation-element {
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease,
+              transform 2s ease;
+}*/
+
+.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
