@@ -283,6 +283,10 @@ i.fa {
   margin-bottom: 25px
 }
 
+.download .container button.btn {
+  padding: 15px 20px;
+}
+
 /*****************
     MEDIA QUERIES
 *****************/
@@ -366,5 +370,13 @@ i.fa {
 
   .main-header p {
     font-size: 18px;
+  }
+
+  /*****************
+     HEADER
+  *****************/
+
+  .download .container button.btn {
+    padding: 20px 30px;
   }
 }
